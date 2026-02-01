@@ -14,14 +14,14 @@ const Navbar = () => {
   };
 
   return (
-    <nav className=" inset-x-0 fixed top-0 left-0 right-0 w-screen z-50 bg-primary   border-b border-gray-900 rounded-b-[3px] shadow-xl py-2  flex-none">
+    <nav className=" inset-x-0 fixed top-0 left-0 right-0 w-screen z-50 bg-primary   border-b border-gray-900 rounded-b-[3px] shadow-xl py-3  flex-none">
       <div className="w-full px-6 lg:px-10 relative text-sm">
         <div className="flex justify-between items-center">
-          <div className="flex items-center shrink-0 cursor-pointer ml-6 mt-1 ">
+          <div className=" relative w-52 lg:w-51 lg:h-12 flex items-center ">
             <img
               src={Logo}
               alt="VidhalayaOS Logo"
-              className="h-13 w-auto mr-4 transform scale-310 object-contain [image-rendering:-webkit-optimize-contrast]"
+              className=" absolute top-1/2 -translate-y-1/2 lg:ml-12 ml-11 -translate-x-1/2 mt-1  h-30 lg:h-52 w-auto object-contain z-50 [image-rendering:-webkit-optimize-contrast] drop-shadow-lg"
             />
           </div>
 
@@ -48,7 +48,7 @@ const Navbar = () => {
             <Button
               href="#"
               variant="primary"
-              className="px-6 py-2  text-[15px]"
+              className="p-5  text-[14px]"
             >
               Sign In
             </Button>

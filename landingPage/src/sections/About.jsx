@@ -9,8 +9,7 @@ import {
   BookOpen,
   CheckCircle2,
 } from "lucide-react";
-import bgvideo from "../assets/bgvideos/video2.mp4";
-import BgImage from "../assets/bgimages/img9.png"
+import BgImage from "../assets/bgimages/img9.png";
 
 const featuresData = [
   {
@@ -72,17 +71,25 @@ const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.15 },
+    transition: { staggerChildren: 0.1, delayChildren: 0.1 },
   },
 };
 
 const bubbleVariants = {
-  hidden: { scale: 0.9, opacity: 0, y: 30 },
+  hidden: {
+    opacity: 0,
+    y: 20,
+    scale: 0.98,
+  },
   visible: {
-    scale: 1,
     opacity: 1,
     y: 0,
-    transition: { type: "spring", stiffness: 80, damping: 20, mass: 1 },
+    scale: 1,
+    transition: {
+      duration: 0.5,
+      ease: [0.25, 1, 0.5, 1],
+      forceRender: true,
+    },
   },
 };
 
@@ -104,7 +111,7 @@ const About = () => {
           <source src={bgvideo} type="video/mp4" />
         </video> */}
         <img
-          src={BgImage} // 🚀 Apna image import yahan use kar
+          src={BgImage}
           alt="Background"
           className="absolute inset-0 w-full h-full object-cover z-0"
         />
@@ -144,18 +151,18 @@ const About = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: false, amount: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-2 will-change-transform lg:grid-cols-3 gap-3 lg:gap-4"
         >
           {featuresData.map((feature, idx) => (
             <motion.div
               key={idx}
               variants={bubbleVariants}
-              whileHover={{ y: -5, scale: 1.02 }}
-              className={`lg:p-5 p-3 lg:rounded-[1.8rem] rounded-[1.2rem] border border-gray-100 ${feature.bgColor} transition-all relative overflow-hidden`}
+              className={`lg:p-6 p-4 lg:rounded-4xl rounded-[1.2rem] border border-gray-100 ${feature.bgColor} transform-gpu will-change-transform transition-shadow duration-300 hover:shadow-xl relative overflow-hidden`}
+              style={{ backfaceVisibility: "hidden" }}
             >
               <div
-                className={`absolute -right-4 -top-4 w-20 h-20 ${feature.iconBg} opacity-5 blur-3xl rounded-full group-hover:opacity-20 transition-opacity`}
+                className={`absolute -right-4 -top-4 w-16 h-16 ${feature.iconBg} opacity-10 blur-2xl rounded-full pointer-events-none`}
               ></div>
               <div
                 className={`lg:w-10 lg:h-10 w-8 h-8  ${feature.iconBg}  rounded-lg flex items-center justify-center mb-3`}

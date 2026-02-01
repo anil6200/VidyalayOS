@@ -78,7 +78,7 @@ const Contact = () => {
       id="contact"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative w-full -mt-38 py-14 lg:py-16 px-6 lg:px-20 overflow-hidden bg-white flex items-center min-h-150 z-10"
+      className=" relative w-full -mt-38 pt-14 pb-4 lg:py-16 px-6 lg:px-20 overflow-hidden bg-white flex items-center lg:min-h-150 min-h-fit z-10"
     >
       <div className=" absolute inset-0 z-0 pointer-events-none">
         <video

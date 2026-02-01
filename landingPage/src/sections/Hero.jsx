@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import dashboard from "../assets/images/dashboard.png";
 import dashboard2 from "../assets/images/dashboard2.png";
-import dashboard3 from "../assets/images/logo3.png";
+import dashboard4 from "../assets/images/dashboard3.png";
 import bgvideo from "../assets/bgvideos/video3.mp4";
 import { Link } from "react-scroll";
 
@@ -41,7 +41,7 @@ const itemVariants = {
 };
 
 const Hero = () => {
-  const sliderImages = [dashboard, dashboard2, dashboard3];
+  const sliderImages = [dashboard4, dashboard, dashboard2];
   const [currentImg, setCurrentImg] = useState(0);
 
   const [index, setIndex] = useState(0);
