@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 
 import bgVideo from "../assets/bgvideos/video5.mp4";
+import BgImage from "../assets/bgimages/img11.png";
 
 const Contact = () => {
   const [formData, setFormData] = React.useState({
@@ -91,6 +92,11 @@ const Contact = () => {
         >
           <source src={bgVideo} type="video/mp4" />
         </video>
+        {/* <img
+          src={BgImage}
+          alt="Background"
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        /> */}
 
         <div className="absolute top-0 left-0 w-full h-40 bg-linear-to-b from-white to-transparent"></div>
       </div>

@@ -9,7 +9,7 @@ import {
   BookOpen,
   CheckCircle2,
 } from "lucide-react";
-import BgImage from "../assets/bgimages/img9.png";
+import BgImage from "../assets/bgimages/img11.png";
 
 const featuresData = [
   {
