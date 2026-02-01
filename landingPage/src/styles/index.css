@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Sora:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Fraunces:opsz,wght,soft,wonk@9..144,100..900,0..100,0..1 night&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300..800&family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+
+  --color-primary: #050612;
+  --color-accent: #3B82F6;
+  --color-light: #ffffff;
+  --color-dark-text: #1a1a1a;
+  --font-heading: Plus Jakarta Sans, ui-sans-serif, system-ui;
+
+  --font-sora: Sora, sans-serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-instrument: "Instrument Serif", serif;
+  --font-fraunces: "Fraunces", serif;
+  --font-young: "Young Serif", serif;
+  --font-outfit: Outfit, sans-serif;
+  --font-space: Space Grotesk, sans-serif;
+  --font-manrope: Manrope, sans-serif;
+  --font-host: Host Grotesk, sans-serif;
+  --font-hand: "Caveat", cursive;
+}
+body {
+  /* Global Styles */
+  font-family: var(--font-sans);
+  background-color: #ffffff;
+  color: #1a1a1a;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  display: block;
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050612;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 17px;
+  border: 3px solid;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #05061;
+}
+section {
+  background-color: transparent !important;
+  margin-top: -1px;
+  position: relative;
+  width: 100%;
+  scroll-margin-top: 80px;
+  margin-bottom: -1px;
+  border: none
+}
+.optimize-gpu {
+  transform: translate3d(0, 0, 0);
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  perspective: 1000px;
+  contain: content
+}
+html {
+
+  -webkit-font-smoothing: antialiased;
+}
+
+canvas,
+img,
+video,
+.motion-div {
+
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+body {
+  overflow-x: hidden;
+  overscroll-behavior-y: none;
+}
